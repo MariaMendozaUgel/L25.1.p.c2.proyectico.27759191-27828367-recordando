@@ -15,7 +15,7 @@ export default class Cl_vVideo{
         return +this.inCostoBase.value;
     }
 
-    get Hd (){
+    get hd (){
         return this.inHd.value;
     }
 }

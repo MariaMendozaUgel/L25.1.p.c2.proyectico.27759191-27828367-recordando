@@ -15,7 +15,7 @@ get costoBase(){
     return +this.inCostoBase.value;
 }
 
-get tipoFoto(){
+get tipo(){
     return this.inTipo.value;
 }
 }
