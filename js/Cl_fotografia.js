@@ -12,22 +12,28 @@ vendidas.
 import Cl_promocion from "./Cl_promocion.js";
 
 export default class Cl_fotografia extends Cl_promocion {
-    constructor (codigo, costoBase, tipo) {
-        super (codigo, costoBase)
+    constructor ({codigo, costoBase, tipo}) {
+        super ({codigo, costoBase})
             this.tipo = tipo;    
     }
+    set tipo(tipo) {
+        this._tipo = tipo;
+    }
+    get tipo() {
+        return this._tipo;
+    }
     descuento() {
-        if (this.tipo == "D")
+        if (this.tipo === "D")
         return this.costoBase * 0.18;
         else return 0;
     }
     incremento() {
-        if (this.tipo == "I")
+        if (this.tipo === "I")
         return this.costoBase * 0.13;
     else return 0;
     }
     precio() {
-        if (this.tipo == "D")
+        if (this.tipo === "D")
             return this.costoBase - this.descuento();
         else return this.costoBase + this.incremento();
     }

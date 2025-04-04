@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RECORDANDO</title>
 </head>
+
 <body>
-    <div id="salida"></div>
-    <script src="js/index.js" type="module"></script>
+    <h2>Dato del Cliente</h2>
+    <section>
+        <input type="number" id="fotoForm_inCodigo" placeholder="codigo">
+        <input type="number" id="fotoForm_inCostoBase" placeholder="costo base">
+        <input type="text" id="fotoForm_inTipo" placeholder="tipo de foto">
+        <button id="fotoForm_btProcesarFotografia">Procesar Fotografias</button>
+    </section>
+
+    <section>
+        <input type="number" id="videoForm_inCodigo" placeholder="codigo">
+        <input type="number" id="videoForm_inCostoBase" placeholder="costo base">
+        <input type="text" id="videoForm_inHd" placeholder="¿El video es HD? si o no">
+        <button id="video_btProcesarVideo">Procesar Videos</button>
+    </section>
+
+    <section>
+        
+        </div><br>
+
+        <table id="tablaFoto">
+            <h3>Fotografias</h3>
+            <tr>
+                <th>Codigo</th> 
+                <th>Costo</th>
+                <th>Tipo</th>
+                <th>Descuento</th>
+                <th>Incremento</th>
+                <th>Precio</th>
+            </tr>
+        </table><br>
+
+        <table id="tablaVideo">
+            <h3>Videos</h3>
+            <tr>
+                <th>Codigo</th> 
+                <th>Costo</th>
+                <th>HD</th>
+                <th>Incremento</th>
+                <th>Precio</th>
+            </tr>
+            </tr>
+        </table><br>
+        
+        <div id="salida"></div>
+    </section>
+
 </body>
+<script type="module"> import index from "./js/index.js";
+    new index()
+    </script>
 </html>

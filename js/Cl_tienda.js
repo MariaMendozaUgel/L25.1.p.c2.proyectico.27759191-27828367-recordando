@@ -21,10 +21,10 @@ export default class Cl_tienda {
     }
     procesarPromocion(promocion){
         this.totalVentas += promocion.precio();
-        if (promocion instanceof Cl_fotografia && promocion.tipo == "D")
-            this.fotosDigitales++;
-        if(promocion instanceof Cl_fotografia && promocion.tipo == "D") 
+        if (promocion instanceof Cl_fotografia) {
+            this.fotosDigitales += 1;
             this.ventasFotosDigitales += promocion.precio();
+        }
     }
     totalVendidos(){
         return this.totalVentas;
